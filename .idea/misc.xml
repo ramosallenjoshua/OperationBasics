@@ -3,7 +3,14 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/ACER/AndroidStudioProjects/OperationBasics/app/src/main/res/layout/activity_main.xml" value="0.536" />
+        <entry key="..\:/Users/ACER/AndroidStudioProjects/OperationBasics/app/src/main/res/drawable/ic_baseline_calculate_24.xml" value="0.2255" />
+        <entry key="..\:/Users/ACER/AndroidStudioProjects/OperationBasics/app/src/main/res/drawable/ic_baseline_insert_chart_outlined_24.xml" value="0.2255" />
+        <entry key="..\:/Users/ACER/AndroidStudioProjects/OperationBasics/app/src/main/res/layout-w1240dp/activity_login.xml" value="0.1734375" />
+        <entry key="..\:/Users/ACER/AndroidStudioProjects/OperationBasics/app/src/main/res/layout-w936dp/activity_login.xml" value="0.190625" />
+        <entry key="..\:/Users/ACER/AndroidStudioProjects/OperationBasics/app/src/main/res/layout/activity_login.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/ACER/AndroidStudioProjects/OperationBasics/app/src/main/res/layout/activity_main.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/ACER/AndroidStudioProjects/OperationBasics/app/src/main/res/layout/activity_math_problems.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/ACER/AndroidStudioProjects/OperationBasics/app/src/main/res/layout/activity_statistics.xml" value="0.25416666666666665" />
       </map>
     </option>
   </component>

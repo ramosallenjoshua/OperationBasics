@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">OperationBasics</string>
+    <string name="welcomeText">Welcome to Operation Basics!</string>
+    <string name="testText">Test yourself</string>
+    <string name="assessText">Assess your Performance</string>
+    <string name="statisticsTitleText">Statistics</string>
 </resources>
