@@ -11,9 +11,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="70dp"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="-10dp"
         android:layout_marginEnd="70dp"
-        android:layout_marginBottom="25dp"
+        android:layout_marginBottom="-100dp"
         android:text="@string/welcomeText"
         android:textAlignment="center"
         android:textSize="24sp"
@@ -33,7 +33,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/welcomeText"
-        app:srcCompat="@drawable/ic_baseline_calculate_24" />
+        app:srcCompat="@drawable/test_button" />
 
     <TextView
         android:id="@+id/testText"
@@ -61,7 +61,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/testText"
-        app:srcCompat="@drawable/ic_baseline_insert_chart_outlined_24" />
+        app:srcCompat="@drawable/performance_button" />
 
     <TextView
         android:id="@+id/textView2"
