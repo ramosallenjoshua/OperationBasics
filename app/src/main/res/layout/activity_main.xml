@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/peach"
     tools:context=".MainActivity">
 
     <TextView
@@ -11,12 +12,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="70dp"
-        android:layout_marginTop="-10dp"
+        android:layout_marginTop="-20dp"
         android:layout_marginEnd="70dp"
-        android:layout_marginBottom="-100dp"
+        android:fontFamily="@font/vertigo_flf_bold"
         android:text="@string/welcomeText"
         android:textAlignment="center"
-        android:textSize="24sp"
+        android:textSize="20sp"
+        android:textColor="#261A00"
         app:layout_constraintBottom_toTopOf="@+id/testButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -24,10 +26,11 @@
 
     <ImageView
         android:id="@+id/testButton"
-        android:layout_width="175dp"
-        android:layout_height="175dp"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
         android:layout_marginStart="115dp"
         android:layout_marginEnd="115dp"
+        android:layout_marginTop="0dp"
         android:contentDescription="@string/testText"
         app:layout_constraintBottom_toTopOf="@+id/testText"
         app:layout_constraintEnd_toEndOf="parent"
@@ -40,22 +43,26 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="145dp"
+        android:layout_marginTop="-100dp"
         android:layout_marginEnd="145dp"
+        android:fontFamily="@font/vertigo_flf_bold"
         android:text="@string/testText"
         android:textAlignment="center"
-        android:textSize="20sp"
+        android:textColor="#261A00"
+        android:textSize="30sp"
         app:layout_constraintBottom_toTopOf="@+id/assesButton"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/testButton" />
 
     <ImageView
         android:id="@+id/assesButton"
-        android:layout_width="175dp"
-        android:layout_height="175dp"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
         android:layout_marginStart="115dp"
-        android:layout_marginTop="25dp"
         android:layout_marginEnd="115dp"
+        android:layout_marginTop="-50dp"
         android:contentDescription="@string/assessText"
         app:layout_constraintBottom_toTopOf="@+id/textView2"
         app:layout_constraintEnd_toEndOf="parent"
@@ -69,13 +76,24 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="90dp"
         android:layout_marginEnd="90dp"
-        android:layout_marginBottom="100dp"
+        android:layout_marginBottom="200dp"
+        android:fontFamily="@font/vertigo_flf_bold"
+        android:textColor="#261A00"
         android:text="@string/assessText"
-        android:textSize="20sp"
+        android:textAlignment="center"
+        android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/assesButton" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="153dp"
+        android:layout_height="196dp"
+        app:srcCompat="@drawable/operation_basic_mascot"
+        tools:layout_editor_absoluteX="154dp"
+        tools:layout_editor_absoluteY="500dp" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

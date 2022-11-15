@@ -1,9 +1,10 @@
 <resources>
-    <string name="app_name">OperationBasics</string>
-    <string name="welcomeText">Welcome to Operation Basics!</string>
-    <string name="testText">Test yourself</string>
-    <string name="assessText">Assess your Performance</string>
+    <string name="app_name">OperationBasic</string>
+    <string name="welcomeText">OPERATION BASIC</string>
+    <string name="testText">TEST</string>
+    <string name="assessText">PERFORMANCE</string>
     <string name="statisticsTitleText">Statistics</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <color name="peach">#FFEED2</color>
 </resources>
