@@ -91,9 +91,13 @@
         android:id="@+id/imageView"
         android:layout_width="153dp"
         android:layout_height="196dp"
-        app:srcCompat="@drawable/operation_basic_mascot"
-        tools:layout_editor_absoluteX="154dp"
-        tools:layout_editor_absoluteY="500dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.635"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/operation_basic_mascot" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
