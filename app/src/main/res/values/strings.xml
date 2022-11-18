@@ -6,5 +6,7 @@
     <string name="statisticsTitleText">Statistics</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="mascot">Mascot</string>
+    <string name="title">Title</string>
     <color name="peach">#FFEED2</color>
 </resources>
