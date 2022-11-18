@@ -4,4 +4,8 @@
         android:fontStyle="normal"
         android:fontWeight="400"
         android:fontFamily="arca_majora_3_bold"/>
+    <font
+        android:fontStyle="normal"
+        android:fontWeight="400"
+        android:fontFamily="vertigo_flf_bold"/>
 </font-family>
