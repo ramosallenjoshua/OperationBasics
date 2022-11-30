@@ -11,5 +11,8 @@
     <string name="addition">addition</string>
     <string name="subtraction">subtraction</string>
     <string name="welcome_bubble">welcome_bubble</string>
+    <string name="answerHint">Type your answer here!</string>
+    <string name="additionQuestion">a + b = ?</string>
+
     <color name="peach">#FFEED2</color>
 </resources>
