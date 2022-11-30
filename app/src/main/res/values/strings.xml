@@ -1,9 +1,15 @@
 <resources>
-    <string name="app_name">OperationBasic</string>
+    <string name="app_name">Operation Basic</string>
     <string name="welcomeText">OPERATION BASIC</string>
     <string name="testText">TEST</string>
     <string name="assessText">PERFORMANCE</string>
     <string name="statisticsTitleText">Statistics</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="mascot">Mascot</string>
+    <string name="title">Title</string>
+    <string name="results">results</string>
+    <string name="addition">addition</string>
+    <string name="subtraction">subtraction</string>
+    <string name="welcome_bubble">welcome_bubble</string>
     <color name="peach">#FFEED2</color>
 </resources>
