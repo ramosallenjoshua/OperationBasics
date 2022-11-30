@@ -6,6 +6,8 @@ import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
+import java.util.Random;
+
 public class MathProblemsActivity extends AppCompatActivity implements DataController {
 
     final int ADDITION_PHASE = 0;
@@ -16,14 +18,21 @@ public class MathProblemsActivity extends AppCompatActivity implements DataContr
     int subtractionScore = 0;
     int additionQuestionCounter = 0;
     int subtractionQuestionCounter = 0;
-    Fragment additionFragment = new AdditionFragment();
-    Fragment subtractionFragment = new SubtractionFragment();
+    int[][] additionQuestions = new int[10][3];
+    int[][] subtractionQuestions = new int[10][3];
+    Fragment additionFragment;
+    Fragment subtractionFragment;
+
+    Random random = new Random();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_math_problems);
 
+        generateQuestions();
+
+        additionFragment = new Fragment();
         openFragment(additionFragment);
     }
 
@@ -63,10 +72,22 @@ public class MathProblemsActivity extends AppCompatActivity implements DataContr
 
         switch(phase){
             case ADDITION_PHASE:
+                additionFragment = new Fragment();
+                sendQuestions(
+                        additionQuestions[additionQuestionCounter][1],
+                        additionQuestions[additionQuestionCounter][2],
+                        additionQuestions[additionQuestionCounter][3],
+                        additionFragment);
                 openFragment(additionFragment);
                 break;
 
             case SUBTRACTION_PHASE:
+                subtractionFragment = new SubtractionFragment();
+                sendQuestions(
+                        subtractionQuestions[subtractionQuestionCounter][1],
+                        subtractionQuestions[subtractionQuestionCounter][2],
+                        subtractionQuestions[subtractionQuestionCounter][3],
+                        subtractionFragment);
                 openFragment(subtractionFragment);
                 break;
 
@@ -90,5 +111,35 @@ public class MathProblemsActivity extends AppCompatActivity implements DataContr
                 .disallowAddToBackStack()
                 .replace(R.id.testProblemFragment, fragment)
                 .commit();
+    }
+
+    private void generateQuestions(){
+        for (int i = 0; i < 10; i++){
+            int sum = 1 + random.nextInt(19);
+            int addend1 = sum - random.nextInt(sum);
+            int addend2 = sum - addend1;
+
+            additionQuestions[i][1] = addend1;
+            additionQuestions[i][2] = addend2;
+            additionQuestions[i][3] = sum;
+        }
+
+        for(int i = 0; i < 10; i++){
+            int subtrahend1 = 1 + random.nextInt(19);
+            int subtrahend2 = subtrahend1 - random.nextInt(subtrahend1);
+            int difference = subtrahend1 - subtrahend2;
+
+            subtractionQuestions[i][1] = subtrahend1;
+            subtractionQuestions[i][2] = subtrahend2;
+            subtractionQuestions[i][3] = difference;
+        }
+    }
+
+    private void sendQuestions(int num1, int num2, int answer, Fragment fragment){
+        Bundle bd = new Bundle();
+        bd.putInt("num1", num1);
+        bd.putInt("num2", num2);
+        bd.putInt("answer", answer);
+        fragment.setArguments(bd);
     }
 }
