@@ -7,97 +7,63 @@
     android:background="@color/peach"
     tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/welcomeText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="70dp"
-        android:layout_marginTop="-20dp"
-        android:layout_marginEnd="70dp"
-        android:fontFamily="@font/vertigo_flf_bold"
-        android:text="@string/welcomeText"
-        android:textAlignment="center"
-        android:textSize="20sp"
-        android:textColor="#261A00"
+    <ImageView
+        android:id="@+id/OperationBasicLogo"
+        android:layout_width="102dp"
+        android:layout_height="79dp"
         app:layout_constraintBottom_toTopOf="@+id/testButton"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/operation_basic_text_logo" />
 
     <ImageView
         android:id="@+id/testButton"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
+        android:layout_width="300dp"
+        android:layout_height="170dp"
         android:layout_marginStart="115dp"
+        android:layout_marginTop="28dp"
         android:layout_marginEnd="115dp"
-        android:layout_marginTop="0dp"
         android:contentDescription="@string/testText"
-        app:layout_constraintBottom_toTopOf="@+id/testText"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/welcomeText"
+        app:layout_constraintTop_toBottomOf="@+id/OperationBasicLogo"
         app:srcCompat="@drawable/test_button" />
-
-    <TextView
-        android:id="@+id/testText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="145dp"
-        android:layout_marginTop="-100dp"
-        android:layout_marginEnd="145dp"
-        android:fontFamily="@font/vertigo_flf_bold"
-        android:text="@string/testText"
-        android:textAlignment="center"
-        android:textColor="#261A00"
-        android:textSize="30sp"
-        app:layout_constraintBottom_toTopOf="@+id/assesButton"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.494"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/testButton" />
 
     <ImageView
         android:id="@+id/assesButton"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
+        android:layout_width="300dp"
+        android:layout_height="170dp"
         android:layout_marginStart="115dp"
+        android:layout_marginTop="44dp"
         android:layout_marginEnd="115dp"
-        android:layout_marginTop="-50dp"
         android:contentDescription="@string/assessText"
-        app:layout_constraintBottom_toTopOf="@+id/textView2"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/testText"
+        app:layout_constraintTop_toBottomOf="@+id/testButton"
         app:srcCompat="@drawable/performance_button" />
-
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="90dp"
-        android:layout_marginEnd="90dp"
-        android:layout_marginBottom="200dp"
-        android:fontFamily="@font/vertigo_flf_bold"
-        android:textColor="#261A00"
-        android:text="@string/assessText"
-        android:textAlignment="center"
-        android:textSize="30sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/assesButton" />
 
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="153dp"
         android:layout_height="196dp"
+        android:layout_marginBottom="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.635"
+        app:layout_constraintHorizontal_bias="0.217"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2"
-        app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/operation_basic_mascot" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="212dp"
+        android:layout_height="148dp"
+        app:srcCompat="@drawable/welcome_balloon"
+        tools:layout_editor_absoluteX="144dp"
+        tools:layout_editor_absoluteY="493dp" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
