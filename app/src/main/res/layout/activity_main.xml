@@ -61,9 +61,12 @@
         android:id="@+id/imageView4"
         android:layout_width="212dp"
         android:layout_height="148dp"
-        app:srcCompat="@drawable/welcome_balloon"
-        tools:layout_editor_absoluteX="144dp"
-        tools:layout_editor_absoluteY="493dp" />
+        android:layout_marginTop="508dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.723"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/welcome_balloon" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
