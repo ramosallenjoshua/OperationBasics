@@ -1,8 +1,10 @@
 package com.example.operationbasics;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -25,8 +27,25 @@ public class LoginMenuActivity extends AppCompatActivity {
         passwordEditText = findViewById(R.id.user_input_password);
 
         loginButton.setOnClickListener(View->{
-            emailEditText.getText().toString();
-            passwordEditText.getText().toString();
+            String emailText = emailEditText.getText().toString();
+            String passwordText = passwordEditText.getText().toString();
+
+            if(emailText.isEmpty() || passwordText.isEmpty()) {
+                Toast.makeText(this, "Email or Password is missing", Toast.LENGTH_SHORT).show();
+                return;
+            }
+
+            firebaseAuth.signInWithEmailAndPassword(emailText, passwordText).addOnCompleteListener(Task->{
+                if(Task.isSuccessful()){
+                    Toast.makeText(this, "Login Success", Toast.LENGTH_SHORT).show();
+                    Intent intent = new Intent(this, MainActivity.class);
+                    startActivity(intent);
+                }else{
+                    Toast.makeText(this, "Login Failed. Error: "
+                            + Task.getException().toString(), Toast.LENGTH_SHORT).show();
+                    return;
+                }
+            });
         });
 
     }
