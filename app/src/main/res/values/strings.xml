@@ -13,6 +13,15 @@
     <string name="welcome_bubble">welcome_bubble</string>
     <string name="answerHint">Type your answer here!</string>
     <string name="additionQuestion">a + b = ?</string>
+    <string name="signUpText">Sign Up</string>
+    <string name="firstNameText">First Name</string>
+    <string name="lastNameText">Last Name</string>
+    <string name="institutionName">Institution/School</string>
+    <string name="emailText">Email</string>
+    <string name="passwordText">Password</string>
+    <string name="confPassText">Confirm Password</string>
+    <string name="signupLoginText">Already have an account? Tap here to log in</string>
+    <string name="loginSignUpText">Create New Account</string>
 
     <color name="peach">#FFEED2</color>
 </resources>

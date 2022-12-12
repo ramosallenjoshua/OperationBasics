@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -13,6 +14,7 @@ import com.google.firebase.auth.FirebaseAuth;
 public class LoginMenuActivity extends AppCompatActivity {
 
     ImageView loginButton;
+    TextView signUpButton;
     EditText emailEditText, passwordEditText;
     FirebaseAuth firebaseAuth;
 
@@ -25,6 +27,7 @@ public class LoginMenuActivity extends AppCompatActivity {
         loginButton = findViewById(R.id.login_button);
         emailEditText = findViewById(R.id.user_input_email);
         passwordEditText = findViewById(R.id.user_input_password);
+        signUpButton = findViewById(R.id.login_signUpButton);
 
         loginButton.setOnClickListener(View->{
             String emailText = emailEditText.getText().toString();
@@ -40,12 +43,18 @@ public class LoginMenuActivity extends AppCompatActivity {
                     Toast.makeText(this, "Login Success", Toast.LENGTH_SHORT).show();
                     Intent intent = new Intent(this, MainActivity.class);
                     startActivity(intent);
+                    finish();
                 }else{
                     Toast.makeText(this, "Login Failed. Error: "
                             + Task.getException().toString(), Toast.LENGTH_SHORT).show();
                     return;
                 }
             });
+        });
+
+        signUpButton.setOnClickListener(View->{
+            Intent intent = new Intent(this, SignUpActivity.class);
+            startActivity(intent);
         });
 
     }

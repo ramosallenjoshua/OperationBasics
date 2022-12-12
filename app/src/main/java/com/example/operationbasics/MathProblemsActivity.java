@@ -74,9 +74,9 @@ public class MathProblemsActivity extends AppCompatActivity implements DataContr
             case ADDITION_PHASE:
                 additionFragment = new Fragment();
                 sendQuestions(
+                        additionQuestions[additionQuestionCounter][0],
                         additionQuestions[additionQuestionCounter][1],
                         additionQuestions[additionQuestionCounter][2],
-                        additionQuestions[additionQuestionCounter][3],
                         additionFragment);
                 openFragment(additionFragment);
                 break;
@@ -84,9 +84,9 @@ public class MathProblemsActivity extends AppCompatActivity implements DataContr
             case SUBTRACTION_PHASE:
                 subtractionFragment = new SubtractionFragment();
                 sendQuestions(
+                        subtractionQuestions[subtractionQuestionCounter][0],
                         subtractionQuestions[subtractionQuestionCounter][1],
                         subtractionQuestions[subtractionQuestionCounter][2],
-                        subtractionQuestions[subtractionQuestionCounter][3],
                         subtractionFragment);
                 openFragment(subtractionFragment);
                 break;
@@ -119,9 +119,9 @@ public class MathProblemsActivity extends AppCompatActivity implements DataContr
             int addend1 = sum - random.nextInt(sum);
             int addend2 = sum - addend1;
 
-            additionQuestions[i][1] = addend1;
-            additionQuestions[i][2] = addend2;
-            additionQuestions[i][3] = sum;
+            additionQuestions[i][0] = addend1;
+            additionQuestions[i][1] = addend2;
+            additionQuestions[i][2] = sum;
         }
 
         for(int i = 0; i < 10; i++){
@@ -129,9 +129,9 @@ public class MathProblemsActivity extends AppCompatActivity implements DataContr
             int subtrahend2 = subtrahend1 - random.nextInt(subtrahend1);
             int difference = subtrahend1 - subtrahend2;
 
-            subtractionQuestions[i][1] = subtrahend1;
-            subtractionQuestions[i][2] = subtrahend2;
-            subtractionQuestions[i][3] = difference;
+            subtractionQuestions[i][0] = subtrahend1;
+            subtractionQuestions[i][1] = subtrahend2;
+            subtractionQuestions[i][2] = difference;
         }
     }
 

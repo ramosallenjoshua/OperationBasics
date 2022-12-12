@@ -14,23 +14,28 @@
         android:theme="@style/Theme.OperationBasics"
         tools:targetApi="31">
         <activity
+            android:name=".SignUpActivity"
+            android:exported="false"
+            android:parentActivityName=".LoginMenuActivity">
+        </activity>
+        <activity
             android:name=".MathProblemsInitialActivity"
             android:exported="false"
-            android:parentActivityName=".MainActivity"/>
+            android:parentActivityName=".MainActivity" />
         <activity
             android:name=".ResultsActivity"
             android:exported="false"
-            android:parentActivityName=".MainActivity"/>
+            android:parentActivityName=".MainActivity" />
         <activity
             android:name=".StatisticsActivity"
             android:exported="false" />
         <activity
             android:name=".MathProblemsActivity"
             android:exported="false"
-            android:parentActivityName=".MathProblemsInitialActivity"/>
+            android:parentActivityName=".MathProblemsInitialActivity" />
         <activity
             android:name=".MainActivity"
-            android:exported="false"/>
+            android:exported="false" />
         <activity
             android:name=".LoginMenuActivity"
             android:exported="true">
