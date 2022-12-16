@@ -44,9 +44,9 @@ public class SignUpActivity extends AppCompatActivity {
 
         signUpButton.setOnClickListener(View->{
             //Variables
-            String fNameStr, lNameStr, schoolStr, emailStr, passwordStr, confPasswordStr, passwordRegex;
+            String fNameStr, lNameStr, schoolStr, emailStr, passwordStr, confPasswordStr, passwordRegex, emailRegex;
             Pattern regexPattern;
-            Matcher patternMatcher;
+            Matcher passwordPatternMatcher, emailPatternMatcher;
 
             fNameStr = fName.getText().toString();
             lNameStr = lName.getText().toString();
@@ -56,11 +56,14 @@ public class SignUpActivity extends AppCompatActivity {
             confPasswordStr = confPassword.getText().toString();
 
             //Email Pattern
+            emailRegex = "^(.+)@(.+)$";
+            regexPattern = Pattern.compile(emailRegex);
+            emailPatternMatcher = regexPattern.matcher(emailStr);
 
             //Password Pattern
             passwordRegex = "^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d).+$";
             regexPattern = Pattern.compile(passwordRegex);
-            patternMatcher = regexPattern.matcher(passwordStr);
+            passwordPatternMatcher = regexPattern.matcher(passwordStr);
 
             //Validation
             //Missing Field Validation
@@ -95,6 +98,10 @@ public class SignUpActivity extends AppCompatActivity {
             }
 
             //Email Pattern Validation
+            if(!emailPatternMatcher.matches()){
+                Toast.makeText(this, "Invalid Email", Toast.LENGTH_SHORT).show();
+                return;
+            }
 
             //Password Length Validation
             if(passwordStr.length() < 8 || passwordStr.length() > 16){
@@ -103,7 +110,7 @@ public class SignUpActivity extends AppCompatActivity {
             }
 
             //Password Pattern Validation
-            if(!patternMatcher.matches()){
+            if(!passwordPatternMatcher.matches()){
                 Toast.makeText(this, "Password must contain at least one uppercase, one lowercase letter, and one number",
                         Toast.LENGTH_SHORT).show();
                 return;
