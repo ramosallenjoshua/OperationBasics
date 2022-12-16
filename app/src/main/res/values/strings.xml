@@ -14,6 +14,7 @@
     <string name="answerHint">Type your answer here!</string>
     <string name="additionQuestion">a + b = ?</string>
     <string name="signUpText">Sign Up</string>
+    <string name="createAccount">Create Account</string>
     <string name="firstNameText">First Name</string>
     <string name="lastNameText">Last Name</string>
     <string name="institutionName">Institution/School</string>
