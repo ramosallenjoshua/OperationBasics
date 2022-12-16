@@ -21,21 +21,18 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <EditText
-        android:id="@+id/signUpEmailEditText"
-        android:layout_width="250dp"
-        android:layout_height="45dp"
-        android:layout_marginTop="32dp"
-        android:background="@color/white"
-        android:ems="10"
-        android:hint="@string/emailText"
-        android:inputType="textEmailAddress"
-        android:textSize="20sp"
-        android:fontFamily="@font/arca_majora_3_bold"
-        app:layout_constraintBottom_toTopOf="@+id/signUpPasswordEditText"
-        app:layout_constraintEnd_toEndOf="@+id/schoolEditText"
-        app:layout_constraintStart_toStartOf="@+id/schoolEditText"
-        app:layout_constraintTop_toBottomOf="@+id/schoolEditText" />
+    <ImageView
+        android:id="@+id/FirstNameBG"
+        android:layout_width="280dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/lastNameEditText"
+        app:layout_constraintEnd_toEndOf="@+id/textView3"
+        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintStart_toStartOf="@+id/textView3"
+        app:layout_constraintTop_toBottomOf="@+id/textView3"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/text_box_round" />
 
     <EditText
         android:id="@+id/firstNameEditText"
@@ -54,37 +51,17 @@
         app:layout_constraintStart_toStartOf="@+id/textView3"
         app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
-    <EditText
-        android:id="@+id/signUpPasswordEditText"
-        android:layout_width="250dp"
-        android:layout_height="45dp"
-        android:layout_marginTop="32dp"
-        android:background="@color/white"
-        android:ems="10"
-        android:hint="@string/passwordText"
-        android:inputType="textPassword"
-        android:textSize="20sp"
-        android:fontFamily="@font/arca_majora_3_bold"
-        app:layout_constraintBottom_toTopOf="@+id/signUpConfirmPasswordEditText"
-        app:layout_constraintEnd_toEndOf="@+id/signUpEmailEditText"
-        app:layout_constraintStart_toStartOf="@+id/signUpEmailEditText"
-        app:layout_constraintTop_toBottomOf="@+id/signUpEmailEditText" />
-
-    <EditText
-        android:id="@+id/schoolEditText"
-        android:layout_width="250dp"
-        android:layout_height="45dp"
-        android:layout_marginTop="32dp"
-        android:background="@color/white"
-        android:ems="10"
-        android:hint="@string/institutionName"
-        android:inputType="textPersonName"
-        android:textSize="20sp"
-        android:fontFamily="@font/arca_majora_3_bold"
-        app:layout_constraintBottom_toTopOf="@+id/signUpEmailEditText"
-        app:layout_constraintEnd_toEndOf="@+id/lastNameEditText"
-        app:layout_constraintStart_toStartOf="@+id/lastNameEditText"
-        app:layout_constraintTop_toBottomOf="@+id/lastNameEditText" />
+    <ImageView
+        android:id="@+id/LastNameBG"
+        android:layout_width="280dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/schoolEditText"
+        app:layout_constraintEnd_toEndOf="@+id/firstNameEditText"
+        app:layout_constraintStart_toStartOf="@+id/firstNameEditText"
+        app:layout_constraintTop_toBottomOf="@+id/firstNameEditText"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/text_box_round"/>
 
     <EditText
         android:id="@+id/lastNameEditText"
@@ -102,6 +79,102 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/firstNameEditText"
         app:layout_constraintTop_toBottomOf="@+id/firstNameEditText" />
+
+    <ImageView
+        android:id="@+id/InstitutionSchoolBG"
+        android:layout_width="280dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/signUpEmailEditText"
+        app:layout_constraintEnd_toEndOf="@+id/lastNameEditText"
+        app:layout_constraintStart_toStartOf="@+id/lastNameEditText"
+        app:layout_constraintTop_toBottomOf="@+id/lastNameEditText"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/text_box_round" />
+
+    <EditText
+        android:id="@+id/schoolEditText"
+        android:layout_width="250dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="32dp"
+        android:background="@color/white"
+        android:ems="10"
+        android:hint="@string/institutionName"
+        android:inputType="textPersonName"
+        android:textSize="20sp"
+        android:fontFamily="@font/arca_majora_3_bold"
+        app:layout_constraintBottom_toTopOf="@+id/signUpEmailEditText"
+        app:layout_constraintEnd_toEndOf="@+id/lastNameEditText"
+        app:layout_constraintStart_toStartOf="@+id/lastNameEditText"
+        app:layout_constraintTop_toBottomOf="@+id/lastNameEditText" />
+
+    <ImageView
+        android:id="@+id/EmailBG"
+        android:layout_width="280dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/signUpPasswordEditText"
+        app:layout_constraintEnd_toEndOf="@+id/schoolEditText"
+        app:layout_constraintHorizontal_bias="0.466"
+        app:layout_constraintStart_toStartOf="@+id/schoolEditText"
+        app:layout_constraintTop_toBottomOf="@+id/schoolEditText"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/text_box_round" />
+
+    <EditText
+        android:id="@+id/signUpEmailEditText"
+        android:layout_width="250dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="32dp"
+        android:background="@color/white"
+        android:ems="10"
+        android:hint="@string/emailText"
+        android:inputType="textEmailAddress"
+        android:textSize="20sp"
+        android:fontFamily="@font/arca_majora_3_bold"
+        app:layout_constraintBottom_toTopOf="@+id/signUpPasswordEditText"
+        app:layout_constraintEnd_toEndOf="@+id/schoolEditText"
+        app:layout_constraintStart_toStartOf="@+id/schoolEditText"
+        app:layout_constraintTop_toBottomOf="@+id/schoolEditText" />
+
+    <ImageView
+        android:id="@+id/PasswordBG"
+        android:layout_width="280dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/signUpConfirmPasswordEditText"
+        app:layout_constraintEnd_toEndOf="@+id/signUpEmailEditText"
+        app:layout_constraintHorizontal_bias="0.466"
+        app:layout_constraintStart_toStartOf="@+id/signUpEmailEditText"
+        app:layout_constraintTop_toBottomOf="@+id/signUpEmailEditText"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/text_box_round" />
+
+    <EditText
+        android:id="@+id/signUpPasswordEditText"
+        android:layout_width="250dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="32dp"
+        android:background="@color/white"
+        android:ems="10"
+        android:hint="@string/passwordText"
+        android:inputType="textPassword"
+        android:textSize="20sp"
+        android:fontFamily="@font/arca_majora_3_bold"
+        app:layout_constraintBottom_toTopOf="@+id/signUpConfirmPasswordEditText"
+        app:layout_constraintEnd_toEndOf="@+id/signUpEmailEditText"
+        app:layout_constraintStart_toStartOf="@+id/signUpEmailEditText"
+        app:layout_constraintTop_toBottomOf="@+id/signUpEmailEditText" />
+
+    <ImageView
+        android:id="@+id/ConfirmPasswordBG"
+        android:layout_width="280dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="@+id/signUpPasswordEditText"
+        app:layout_constraintStart_toStartOf="@+id/signUpPasswordEditText"
+        app:layout_constraintTop_toBottomOf="@+id/signUpPasswordEditText"
+        app:srcCompat="@drawable/text_box_round" />
 
     <EditText
         android:id="@+id/signUpConfirmPasswordEditText"
@@ -145,4 +218,5 @@
         app:layout_constraintHorizontal_bias="0.524"
         app:layout_constraintStart_toStartOf="@+id/signUpLayout_SignUpButton"
         app:layout_constraintTop_toBottomOf="@+id/signUpLayout_SignUpButton" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

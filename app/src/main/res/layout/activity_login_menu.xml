@@ -23,53 +23,6 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/operation_basic_text_logo" />
 
-    <EditText
-        android:id="@+id/user_input_email"
-        android:layout_width="250dp"
-        android:layout_height="45dp"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="16dp"
-        android:background="@color/white"
-        android:ems="10"
-        android:gravity="center"
-        android:hint="@string/emailText"
-        android:inputType="textPersonName"
-        android:fontFamily="@font/arca_majora_3_bold"
-        app:layout_constraintBottom_toTopOf="@+id/txt_password"
-        app:layout_constraintEnd_toEndOf="@+id/txt_email"
-        app:layout_constraintStart_toStartOf="@+id/txt_email"
-        app:layout_constraintTop_toBottomOf="@+id/txt_email" />
-
-    <ImageView
-        android:id="@+id/login_button"
-        android:layout_width="411dp"
-        android:layout_height="43dp"
-        android:layout_marginTop="32dp"
-        app:layout_constraintBottom_toTopOf="@+id/login_signUpButton"
-        app:layout_constraintEnd_toEndOf="@+id/user_input_password"
-        app:layout_constraintStart_toStartOf="@+id/user_input_password"
-        app:layout_constraintTop_toBottomOf="@+id/user_input_password"
-        app:srcCompat="@drawable/login_button" />
-
-    <TextView
-        android:id="@+id/txt_password"
-        android:layout_width="411dp"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="32dp"
-        android:layout_weight="1"
-        android:fontFamily="@font/arca_majora_3_bold"
-        android:gravity="center"
-        android:text="password"
-        android:textAlignment="center"
-        android:textAllCaps="true"
-        android:textColor="#261A00"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/user_input_password"
-        app:layout_constraintEnd_toEndOf="@+id/user_input_email"
-        app:layout_constraintStart_toStartOf="@+id/user_input_email"
-        app:layout_constraintTop_toBottomOf="@+id/user_input_email" />
-
     <TextView
         android:id="@+id/txt_email"
         android:layout_width="411dp"
@@ -89,6 +42,67 @@
         app:layout_constraintStart_toStartOf="@+id/imageView2"
         app:layout_constraintTop_toBottomOf="@+id/imageView2" />
 
+    <ImageView
+        android:id="@+id/EmailBG"
+        android:layout_width="270dp"
+        android:layout_height="63dp"
+        app:layout_constraintBottom_toTopOf="@+id/txt_password"
+        app:layout_constraintEnd_toEndOf="@+id/txt_email"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="@+id/txt_email"
+        app:layout_constraintTop_toBottomOf="@+id/txt_email"
+        app:layout_constraintVertical_bias="0.333"
+        app:srcCompat="@drawable/text_box_round" />
+
+    <EditText
+        android:id="@+id/user_input_email"
+        android:layout_width="250dp"
+        android:layout_height="45dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="16dp"
+        android:background="@color/white"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="@string/emailText"
+        android:inputType="textPersonName"
+        android:fontFamily="@font/arca_majora_3_bold"
+        app:layout_constraintBottom_toTopOf="@+id/txt_password"
+        app:layout_constraintEnd_toEndOf="@+id/txt_email"
+        app:layout_constraintStart_toStartOf="@+id/txt_email"
+        app:layout_constraintTop_toBottomOf="@+id/txt_email" />
+
+    <TextView
+        android:id="@+id/txt_password"
+        android:layout_width="411dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="32dp"
+        android:layout_weight="1"
+        android:fontFamily="@font/arca_majora_3_bold"
+        android:gravity="center"
+        android:text="password"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textColor="#261A00"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/user_input_password"
+        app:layout_constraintEnd_toEndOf="@+id/user_input_email"
+        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintStart_toStartOf="@+id/user_input_email"
+        app:layout_constraintTop_toBottomOf="@+id/user_input_email" />
+
+    <ImageView
+        android:id="@+id/PasswordBG"
+        android:layout_width="270dp"
+        android:layout_height="63dp"
+        app:layout_constraintBottom_toTopOf="@+id/login_button"
+        app:layout_constraintEnd_toEndOf="@+id/txt_password"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="@+id/txt_password"
+        app:layout_constraintTop_toBottomOf="@+id/txt_password"
+        app:layout_constraintVertical_bias="0.341"
+        app:srcCompat="@drawable/text_box_round" />
+
     <EditText
         android:id="@+id/user_input_password"
         android:layout_width="250dp"
@@ -97,14 +111,26 @@
         android:layout_marginTop="16dp"
         android:background="@color/white"
         android:ems="10"
+        android:fontFamily="@font/arca_majora_3_bold"
         android:gravity="center"
         android:hint="@string/passwordText"
         android:inputType="textPersonName"
-        android:fontFamily="@font/arca_majora_3_bold"
         app:layout_constraintBottom_toTopOf="@+id/login_button"
         app:layout_constraintEnd_toEndOf="@+id/txt_password"
+        app:layout_constraintHorizontal_bias="0.503"
         app:layout_constraintStart_toStartOf="@+id/txt_password"
         app:layout_constraintTop_toBottomOf="@+id/txt_password" />
+
+    <ImageView
+        android:id="@+id/login_button"
+        android:layout_width="411dp"
+        android:layout_height="43dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintBottom_toTopOf="@+id/login_signUpButton"
+        app:layout_constraintEnd_toEndOf="@+id/user_input_password"
+        app:layout_constraintStart_toStartOf="@+id/user_input_password"
+        app:layout_constraintTop_toBottomOf="@+id/user_input_password"
+        app:srcCompat="@drawable/login_button" />
 
     <TextView
         android:id="@+id/login_signUpButton"
@@ -120,6 +146,5 @@
         app:layout_constraintEnd_toEndOf="@+id/login_button"
         app:layout_constraintStart_toStartOf="@+id/login_button"
         app:layout_constraintTop_toBottomOf="@+id/login_button" />
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>
