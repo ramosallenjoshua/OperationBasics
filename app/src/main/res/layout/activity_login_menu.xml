@@ -142,7 +142,7 @@
         android:layout_marginBottom="200dp"
         android:fontFamily="@font/arca_majora_3_bold"
         android:text="@string/loginSignUpText"
-        android:textColor="@color/black"
+        android:textColor="@color/brown"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/login_button"
