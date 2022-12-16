@@ -31,7 +31,7 @@
             android:text="@string/addition"
             android:textAlignment="center"
             android:textAllCaps="true"
-            android:textColor="#261A00"
+            android:textColor="@color/brown"
             android:textSize="20sp"
             app:layout_constraintBottom_toTopOf="@+id/additionQuestionText"
             app:layout_constraintEnd_toEndOf="parent"
@@ -49,13 +49,13 @@
             android:text="@string/additionQuestion"
             android:textAlignment="center"
             android:textSize="60sp"
-            app:layout_constraintBottom_toTopOf="@+id/additionAnswerEditText"
+            app:layout_constraintBottom_toTopOf="@+id/additionAnswerEditView"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView1" />
 
         <EditText
-            android:id="@+id/additionAnswerEditText"
+            android:id="@+id/additionAnswerEditView"
             android:layout_width="280dp"
             android:layout_height="60dp"
             android:layout_marginTop="32dp"
@@ -65,33 +65,33 @@
             android:inputType="number"
             android:textAlignment="center"
             android:textSize="24sp"
-            app:layout_constraintBottom_toTopOf="@+id/additionNextButton"
+            app:layout_constraintBottom_toTopOf="@+id/nextButton"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.496"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/additionQuestionText" />
 
         <ImageView
-            android:id="@+id/additionNextButton"
+            android:id="@+id/nextButton"
             android:layout_width="150dp"
             android:layout_height="60dp"
             android:layout_marginTop="100dp"
-            app:layout_constraintBottom_toTopOf="@+id/additionQuitButton"
+            app:layout_constraintBottom_toTopOf="@+id/quitButton"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/additionAnswerEditText"
+            app:layout_constraintTop_toBottomOf="@+id/additionAnswerEditView"
             app:srcCompat="@drawable/next_button" />
 
         <ImageView
-            android:id="@+id/additionQuitButton"
-            android:layout_width="150dp"
-            android:layout_height="75dp"
+            android:id="@+id/quitButton"
+            android:layout_width="95dp"
+            android:layout_height="49dp"
             android:layout_marginBottom="64dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/additionNextButton"
+            app:layout_constraintTop_toBottomOf="@+id/nextButton"
             app:srcCompat="@drawable/quit_button" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
