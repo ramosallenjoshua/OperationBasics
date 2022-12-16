@@ -18,6 +18,7 @@
     <string name="firstNameText">First Name</string>
     <string name="lastNameText">Last Name</string>
     <string name="institutionName">Institution/School</string>
+    <string name="login">LOGIN</string>
     <string name="emailText">Email</string>
     <string name="passwordText">Password</string>
     <string name="confPassText">Confirm Password</string>
