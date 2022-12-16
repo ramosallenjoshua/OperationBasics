@@ -32,16 +32,25 @@ public class MathProblemsActivity extends AppCompatActivity implements DataContr
 
         generateQuestions();
 
-        additionFragment = new Fragment();
+        additionFragment = new AdditionFragment(MathProblemsActivity.this);
+        sendQuestions(
+                additionQuestions[additionQuestionCounter][0],
+                additionQuestions[additionQuestionCounter][1],
+                additionQuestions[additionQuestionCounter][2],
+                additionFragment);
         openFragment(additionFragment);
+
     }
 
     @Override
     public void additionScore(int correctAnswer, int studentAnswer) {
         if(studentAnswer == correctAnswer){
             additionScore++;
+
         }
         additionQuestionCounter++;
+        System.out.println("additionscore:" + additionScore);
+        System.out.println("counter: "+additionQuestionCounter);
     }
 
     @Override
@@ -59,20 +68,22 @@ public class MathProblemsActivity extends AppCompatActivity implements DataContr
         subtractionScore = 0;
         additionQuestionCounter = 0;
         subtractionQuestionCounter = 0;
+        finish();
     }
 
     @Override
     public void next() {
-        if(additionQuestionCounter < 9){
+        if(additionQuestionCounter > 9){
             setPhase(SUBTRACTION_PHASE);
         }
-        if(subtractionQuestionCounter < 9){
+        if(subtractionQuestionCounter > 9){
             setPhase(FINISH_PHASE);
         }
+        System.out.println("Phase: "+phase);
 
         switch(phase){
             case ADDITION_PHASE:
-                additionFragment = new Fragment();
+                additionFragment = new AdditionFragment(MathProblemsActivity.this);
                 sendQuestions(
                         additionQuestions[additionQuestionCounter][0],
                         additionQuestions[additionQuestionCounter][1],
