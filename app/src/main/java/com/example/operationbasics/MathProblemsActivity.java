@@ -41,7 +41,6 @@ public class MathProblemsActivity extends AppCompatActivity implements DataContr
         openFragment(additionFragment);
 
     }
-
     @Override
     public void additionScore(int correctAnswer, int studentAnswer) {
         if(studentAnswer == correctAnswer){
@@ -93,7 +92,7 @@ public class MathProblemsActivity extends AppCompatActivity implements DataContr
                 break;
 
             case SUBTRACTION_PHASE:
-                subtractionFragment = new SubtractionFragment();
+                subtractionFragment = new SubtractionFragment(MathProblemsActivity.this);
                 sendQuestions(
                         subtractionQuestions[subtractionQuestionCounter][0],
                         subtractionQuestions[subtractionQuestionCounter][1],
