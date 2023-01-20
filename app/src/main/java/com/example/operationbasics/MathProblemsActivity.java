@@ -13,7 +13,7 @@ public class MathProblemsActivity extends AppCompatActivity implements DataContr
     final int ADDITION_PHASE = 0;
     final int SUBTRACTION_PHASE = 1;
     final int FINISH_PHASE = 2;
-    int phase = ADDITION_PHASE;
+    int phase;
     int additionScore = 0;
     int subtractionScore = 0;
     int additionQuestionCounter = 0;
@@ -29,16 +29,6 @@ public class MathProblemsActivity extends AppCompatActivity implements DataContr
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_math_problems);
-
-        generateQuestions();
-
-        additionFragment = new AdditionFragment(MathProblemsActivity.this);
-        sendQuestions(
-                additionQuestions[additionQuestionCounter][0],
-                additionQuestions[additionQuestionCounter][1],
-                additionQuestions[additionQuestionCounter][2],
-                additionFragment);
-        openFragment(additionFragment);
 
     }
     @Override
