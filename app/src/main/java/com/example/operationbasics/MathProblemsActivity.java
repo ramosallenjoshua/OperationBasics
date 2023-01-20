@@ -1,6 +1,5 @@
 package com.example.operationbasics;
 
-import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -10,18 +9,34 @@ import java.util.Random;
 
 public class MathProblemsActivity extends AppCompatActivity implements DataController {
 
-    final int ADDITION_PHASE = 0;
-    final int SUBTRACTION_PHASE = 1;
-    final int FINISH_PHASE = 2;
-    int phase;
-    int additionScore = 0;
-    int subtractionScore = 0;
-    int additionQuestionCounter = 0;
-    int subtractionQuestionCounter = 0;
+    int quarter, phase, counter;
+
+    //QUARTERS
+    final int QUARTER_1 = 1;
+    final int QUARTER_2 = 2;
+
+    //Q1 PHASES
+    final int COUNTING = 1;
+    final int PLACE_VALUE = 2;
+    final int VALUE_ARANGEMENT = 3;
+
+    //Q2 PHASES
+    final int ADDITION = 1;
+    final int SUBTRACTION = 2;
+
+    //QUESTIONS STORAGE
     int[][] additionQuestions = new int[10][3];
     int[][] subtractionQuestions = new int[10][3];
-    Fragment additionFragment;
-    Fragment subtractionFragment;
+    int[] countingQuestions = new int[5];
+    int[][] placeValueQuestions = new int[5][2];
+    int[] valueArangementQuestions = new int[5];
+
+    //SCORE COUNTER
+    int additionScore = 0;
+    int subtractionScore = 0;
+    int countingScore = 0;
+    int placeValueScore = 0;
+    int valueArangementScore = 0;
 
     Random random = new Random();
 
@@ -30,79 +45,61 @@ public class MathProblemsActivity extends AppCompatActivity implements DataContr
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_math_problems);
 
-    }
-    @Override
-    public void additionScore(int correctAnswer, int studentAnswer) {
-        if(studentAnswer == correctAnswer){
-            additionScore++;
 
-        }
-        additionQuestionCounter++;
-        System.out.println("additionscore:" + additionScore);
-        System.out.println("counter: "+additionQuestionCounter);
     }
 
     @Override
-    public void subtractionScore(int correctAnswer, int studentAnswer) {
-        if(studentAnswer == correctAnswer){
-            subtractionScore++;
+    public void ScoreCounter(int correctAnswer, int studentAnswer) {
+        switch(quarter){
+            case QUARTER_1:
+                switch(phase){
+                    case COUNTING:
+                        if(correctAnswer == studentAnswer){
+                            countingScore++;
+                        }
+                        counter++;
+                        break;
+                    case PLACE_VALUE:
+                        if(correctAnswer == studentAnswer){
+                            placeValueScore++;
+                        }
+                        counter++;
+                        break;
+                    case VALUE_ARANGEMENT:
+                        if(correctAnswer == studentAnswer){
+                            valueArangementScore++;
+                        }
+                        counter++;
+                        break;
+                }
+                break;
+            case QUARTER_2:
+                switch (phase){
+                    case ADDITION:
+                        if(correctAnswer == studentAnswer){
+                            additionScore++;
+                        }
+                        counter++;
+                        break;
+                    case SUBTRACTION:
+                        if(correctAnswer == studentAnswer){
+                            subtractionScore++;
+                        }
+                        counter++;
+                        break;
+                }
+                break;
         }
-        subtractionQuestionCounter++;
     }
 
     @Override
     public void quit() {
-        phase = ADDITION_PHASE;
-        additionScore = 0;
-        subtractionScore = 0;
-        additionQuestionCounter = 0;
-        subtractionQuestionCounter = 0;
         finish();
     }
 
     @Override
     public void next() {
-        if(additionQuestionCounter > 9){
-            setPhase(SUBTRACTION_PHASE);
-        }
-        if(subtractionQuestionCounter > 9){
-            setPhase(FINISH_PHASE);
-        }
-        System.out.println("Phase: "+phase);
 
-        switch(phase){
-            case ADDITION_PHASE:
-                additionFragment = new AdditionFragment(MathProblemsActivity.this);
-                sendQuestions(
-                        additionQuestions[additionQuestionCounter][0],
-                        additionQuestions[additionQuestionCounter][1],
-                        additionQuestions[additionQuestionCounter][2],
-                        additionFragment);
-                openFragment(additionFragment);
-                break;
-
-            case SUBTRACTION_PHASE:
-                subtractionFragment = new SubtractionFragment(MathProblemsActivity.this);
-                sendQuestions(
-                        subtractionQuestions[subtractionQuestionCounter][0],
-                        subtractionQuestions[subtractionQuestionCounter][1],
-                        subtractionQuestions[subtractionQuestionCounter][2],
-                        subtractionFragment);
-                openFragment(subtractionFragment);
-                break;
-
-            case FINISH_PHASE:
-                Intent intent = new Intent(this, ResultsActivity.class)
-                        .putExtra("additionScore", additionScore)
-                        .putExtra("subtractionScore", subtractionScore);
-
-                startActivity(intent);
-                finish();
-        }
-    }
-
-    private void setPhase(int phase){
-        this.phase = phase;
     }
 
     private void openFragment(Fragment fragment){
@@ -114,6 +111,17 @@ public class MathProblemsActivity extends AppCompatActivity implements DataContr
     }
 
     private void generateQuestions(){
+        switch(quarter){
+            case QUARTER_1:
+                q1QuestionGenerator();
+                break;
+            case QUARTER_2:
+                q2QuestionGenerator();
+                break;
+        }
+    }
+
+    private void q1QuestionGenerator(){
         for (int i = 0; i < 10; i++){
             int sum = 1 + random.nextInt(19);
             int addend1 = sum - random.nextInt(sum);
@@ -123,7 +131,6 @@ public class MathProblemsActivity extends AppCompatActivity implements DataContr
             additionQuestions[i][1] = addend2;
             additionQuestions[i][2] = sum;
         }
-
         for(int i = 0; i < 10; i++){
             int subtrahend1 = 1 + random.nextInt(19);
             int subtrahend2 = subtrahend1 - random.nextInt(subtrahend1);
@@ -133,6 +140,33 @@ public class MathProblemsActivity extends AppCompatActivity implements DataContr
             subtractionQuestions[i][1] = subtrahend2;
             subtractionQuestions[i][2] = difference;
         }
+    }
+
+    private void q2QuestionGenerator(){
+        for(int i = 0; i < countingQuestions.length; i++){
+            countingQuestions[i] = 1 + random.nextInt(19);
+        }
+
+        for(int i = 0; i < 5; i++){
+            int digit1 = 1 + random.nextInt(8);
+            int digit2 = 1 + random.nextInt(8);
+
+            if (digit1 == digit2){
+                digit2--;
+            }
+
+            placeValueQuestions[i][0] = digit1;
+            placeValueQuestions[i][1] = digit2;
+        }
+
+        int valueArangement = 5 + random.nextInt(15);
+        for (int i = 0; i < valueArangementQuestions.length; i++){
+            valueArangementQuestions[i] = valueArangement - i;
+        }
+    }
+
+    private void resetCounter(){
+        counter = 0;
     }
 
     private void sendQuestions(int num1, int num2, int answer, Fragment fragment){
